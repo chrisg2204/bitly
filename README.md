@@ -5,7 +5,7 @@ Webservice utilizado para web-app ng-bitly.
 En los siguientes links se encuentra la documentación de servicios y clases.
 
 * [Clases](docs/webservice_classes/index.html)
-* [Servicios](docs/service/index.md)
+* [Servicios](docs/services/index.html)
 
 PRE-REQUISITOS
 ========
