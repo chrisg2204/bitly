@@ -1,0 +1,29 @@
+{
+  "name": "bitly-clone-ws",
+  "version": "1.0.0",
+  "description": "a clone bitly web-service",
+  "main": "index.js",
+  "scripts": {
+    "start": " node index.js",
+    "build-docs": "grunt"
+  },
+  "dependencies": {
+    "atob": "^2.0.3",
+    "body-parser": "^1.15.2",
+    "btoa": "^1.1.2",
+    "chalk": "^2.3.2",
+    "cors": "^2.8.1",
+    "express": "^4.14.0",
+    "loglevel": "^1.4.1",
+    "moment": "^2.17.1",
+    "mysql": "^2.15.0",
+    "sequelize": "^3.24.5"
+  },
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-apidoc": "^0.11.0",
+    "grunt-contrib-yuidoc": "^1.0.0"
+  },
+  "author": "chrisg2204",
+  "license": "MIT"
+}
