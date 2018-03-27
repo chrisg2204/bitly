@@ -1,5 +1,12 @@
 'use strict';
 
+/**
+ * Modelo encargado de realizar las operaciones
+ * de base de dato para la entidad users_links.
+ * @module models
+ * @name UsersLinks
+ * @type {Object}
+ */
 module.exports = (sequelize, DataTypes) => {
 	let UsersLinks = sequelize.define("users_links", {
 		usersLinksId: {
@@ -29,6 +36,12 @@ module.exports = (sequelize, DataTypes) => {
 			}
 		}
 	}, {
+		/**
+		 * Relaciona los modelos entre si.
+		 * @method associate
+		 * @param  {Object} models modelos listados
+		 * @return {[type]}        [description]
+		 */
 		classMethods: {
 			associate: (models) => {
 

@@ -1,14 +1,15 @@
 'use strict';
 
-/**
- * Modelo encargado de realizar las operaciones SQL
- * para la entidad links.
- * @class Links
- * @module models
- */
-
+// Libs
 let moment = require('moment');
 
+/**
+ * Modelo encargado de realizar las operaciones
+ * de base de dato para la entidad links.
+ * @module models
+ * @name Links
+ * @type {Object}
+ */
 module.exports = (sequelize, DataTypes) => {
 	let Links = sequelize.define('links', {
 		linkId: {
@@ -39,7 +40,7 @@ module.exports = (sequelize, DataTypes) => {
 	}, {
 		classMethods: {
 			/**
-			 * Método que relaciona los modelos entre si.
+			 * Relaciona los modelos entre si.
 			 * @method associate
 			 * @param  {Object} models modelos listados
 			 * @return {[type]}        [description]
@@ -48,7 +49,7 @@ module.exports = (sequelize, DataTypes) => {
 
 			},
 			/**
-			 * Método para guardar los datos del link.
+			 * Guardar los datos del link.
 			 * @method addLink
 			 * @param  {Object} objData datos del link
 			 * @return {Object} instancia de objeto link
@@ -61,7 +62,7 @@ module.exports = (sequelize, DataTypes) => {
 
 			},
 			/**
-			 * Método utilizado para encontrar los datos de un link.
+			 * Encuentra los datos de un link.
 			 * @method  findOneLink
 			 * @param  {Object} objCondition condición de búsqueda
 			 * @return {Object} instancia de objeto link

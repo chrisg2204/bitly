@@ -1,5 +1,10 @@
 'use strict';
 
+/**
+ * Clase para manejar las validaciones.
+ * @module utils
+ * @class ValidateUtil
+ */
 class ValidateUtil {
 
 	constructor() {

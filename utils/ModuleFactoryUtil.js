@@ -1,11 +1,14 @@
 'use strict';
 
-const dbConfig = require('../config/db');
+// Libs
 const sequelize = require('sequelize');
+// Config
+const dbConfig = require('../config/Db');
 
 /**
+ * Factory para manejar instancias.
+ * @module utils
  * @class ModuleFactoryUtil
- * @module  utils
  */
 class ModuleFactoryUtil {
 

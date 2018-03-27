@@ -1,9 +1,13 @@
 'use strict';
 
+// Config
+const appConfig = require('./config/app');
+
 /**
  * Archivo para el manejo de tareas
  * llevados a cabo por GruntJS
- * @module src
+ * @name Gruntfile
+ * @type {Object}
  */
 module.exports = (grunt) => {
 
@@ -38,6 +42,6 @@ module.exports = (grunt) => {
 	grunt.loadNpmTasks('grunt-apidoc');
 
 	// Default Task
-	grunt.registerTask('default', ['apidoc', 'yuidoc']);
+	grunt.registerTask('generate-docs', ['apidoc', 'yuidoc']);
 
 };

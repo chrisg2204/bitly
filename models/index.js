@@ -1,18 +1,22 @@
 'use strict';
 
-/**
- * Exporta todos los modelos para poder ser usados con require.
- * @class index
- * @module  models
- * @author Christian Giménez <chrisgabo15@gmail.com>
- */
-
-var fs = require("fs");
-var path = require("path");
-var Sequelize = require("sequelize");
+// Libs
+let fs = require("fs");
+let path = require("path");
+let Sequelize = require("sequelize");
+// Utils
 var sequelize = require('../utils/ModuleFactoryUtil').getSequelizeInstance();
+
 var db = {};
 
+/**
+ * Exporta y asocia todos los modelos.
+ * @module models
+ * @name index
+ * @type {Object}
+ */
+
+// Exporta los modelos.
 var handleModels = function(directory) {
 
     let stat = fs.lstatSync(directory);
@@ -34,12 +38,14 @@ var handleModels = function(directory) {
 
 handleModels(__dirname);
 
+// Asocia los modelos.
 Object.keys(db).forEach(function(modelName) {
     if ("associate" in db[modelName]) {
         db[modelName].associate(db);
     }
 });
 
+// Exporta instancia y tipo de datos.
 db.sequelize = sequelize;
 db.Sequelize = Sequelize;
 

@@ -1,7 +1,15 @@
 'use strict';
 
+// Libs
 let moment = require('moment');
 
+/**
+ * Modelo encargado de realizar las operaciones
+ * de base de dato para la entidad users.
+ * @module models
+ * @name Users
+ * @type {Object}
+ */
 module.exports = (sequelize, DataTypes) => {
 	let Users = sequelize.define("users", {
 		userId: {
@@ -48,9 +56,33 @@ module.exports = (sequelize, DataTypes) => {
 			defaultValue: moment()
 		}
 	}, {
+		/**
+		 * Relaciona los modelos entre si.
+		 * @method associate
+		 * @param  {Object} models modelos listados
+		 * @return {[type]}        [description]
+		 */
 		classMethods: {
 			associate: (models) => {
 
+			},
+			/**
+			 * Agrega un nuevo usuario.
+			 * @method addUser
+			 * @param  {Object} dataObject [description]
+			 * @return {Object}            [description]
+			 */
+			addUser: (dataObject) => {
+				return Users.create(dataObject);
+			},
+			/**
+			 * Encuentra un usuario.
+			 * @method findOneUser
+			 * @param  {Object} conditionObject [description]
+			 * @return {Object}                 [description]
+			 */
+			findOneUser: (conditionObject) => {
+				return Users.findOne(conditionObject);
 			}
 		}
 	});

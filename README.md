@@ -1,6 +1,6 @@
 DESCRIPCIÓN
 ========
-Webservice utilizado para web-app ng-bitly.
+Webservice utilizado para servir funciones de bitly.
 
 En los siguientes links se encuentra la documentación de servicios y clases.
 
@@ -10,10 +10,10 @@ En los siguientes links se encuentra la documentación de servicios y clases.
 PRE-REQUISITOS
 ========
 
-Grunt
+GruntJS
 >$ ```npm install -g grunt-cli ```
 
-Nodejs
+NodeJS
 >$ ```node -v```
 
 CONFIGURACIÓN INICIAL / INSTALACIÓN
@@ -28,8 +28,8 @@ USO
 
 ###### Ejecución del API: 
 
-Para ejecutar el api situarse en la carpeta raiz (src/) y se debe ejecutar el comando: 
->$ ``` npm start ```
+Para ejecutar el api situarse en la carpeta y se debe ejecutar el comando: 
+>$ ``` npm run dev ```
 
 ###### Generarar la documentación:
 

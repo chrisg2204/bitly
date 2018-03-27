@@ -1,58 +1,49 @@
-/**
- * Objeto con las variables de configuracion principal de la aplicacion
- * @class app
- * @module config
- * @author Christian Giménez <chrisgabo15@gmail.com>
- */
+// Libs
 const path = require("path");
 
+/**
+ * Objeto con las propiedades de configuración principal.
+ * @module config
+ * @name App
+ * @type {Object}
+ */
 module.exports = {
     /**
-     * Varibale que contiene la ruta base de la aplicacion.
-     *
-     * @var APP_BASE
-     * @type String
+     * Ruta del web-service.
+     * @property API_LOCATION
      */
     API_LOCATION: path.join(__dirname, '../'),
     /**
-     * Propiedad que describe el puerto sobre el cual correra la app.
-     * @property API_PORT {Number}
+     * Puerto de producción.
+     * @property API_PORT
      */
     API_PORT: process.env.PORT || 9020,
     /**
-     * Propiedad que describe el puerto sobre el cual se hacen pruebas unitarias NO PUEDE SER EL MISMO QUE API_PORT.
-     * @property API_PORT {Number}
+     * Puerto para pruebas unitarias.
+     * @property TEST_API_PORT
      */
     TEST_API_PORT: process.env.PORT || 9022,
-    /**
-     * Log level <https://github.com/pimterry/loglevel>
-     * @property LOG_LEVEL
-     */
-    LOG_LEVEL: 'trace',
     /**
      * Email que se usa para debugear.
      * @property DEBUG_MAIL
      */
     DEBUG_MAIL: 'chrisgabo15@gmail.com',
     /**
-     * Url de el service
+     * Url del web-service.
      * @property SERVICE_URL
      */
-    SERVICE_URL: 'http://127.0.0.1:9020/',
+    SERVICE_URL: 'http://127.0.0.1:' + this.API_PORT + '/',
     /**
-     * Varible que especifica si el servidor va a tener multiples hilos de conexion.
-     * @var MULTI_THREAD
-     * @type Object
+     * Especifica si el servidor va a tener multiples hilos de conexion.
+     * @property MULTI_THREAD
      */
     MULTI_THREAD: {
         ACTIVE: false,
         POOL: 3
     },
     /**
-     * Arreglo con todos los nombres de midlewares que van a ser precargados a las rutas creadas.
-     * @var MIDDLEWARES_AUTOLOAD
-     * @type Array
+     * Midlewares que van a ser precargados a las rutas creadas.
+     * @property MIDDLEWARES_AUTOLOAD
      */
     MIDDLEWARES_AUTOLOAD: ['EnableCrossDomain']
-
 };

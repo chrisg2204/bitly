@@ -1,17 +1,12 @@
 'use strict';
 
 /**
- * Middleware express para habilitar soporte de cross domain.
- * @class EnableCrossDomain
- * @module middlewares
- * @author Christian Giménez <chrisgabo15@gmail.com>
+ * Habilita soporte CORS.
+ * @module middleware
+ * @name EnableCrossDomain
+ * @type {Object}
  */
 module.exports = function(env) {
-    /**
-     * @param  {Request}  req  Objeto request de express.
-     * @param  {Response} res  Objeto response de express.
-     * @param  {Function} next Próximo middleware/callback en la ejecución Express.
-     */
     return (req, res, next) => {
         res.header("Access-Control-Allow-Origin", "*");
         res.header("Access-Control-Allow-Methods", "GET,PUT,POST,DELETE,OPTIONS");

@@ -1,12 +1,10 @@
 'use strict';
 
 /**
- * Clase Utilitaria ResponseUtil
+ * Clase Utilitaria ResponseUtil.
  * @class ResponseUtil
  * @module utils
- * @author Christian Giménez <chrisgabo15@gmail.com>
  */
-
 class ResponseUtil {
 
     constructor() {}
@@ -17,13 +15,13 @@ class ResponseUtil {
      * @param res {Object}
      * @param status {integer}
      * @param data {Object}
-     * @param error {Object}
+     * @param success {Object}
      */
-    sendResponse(res, status, data, error) {
+    sendResponse(res, status, data, success) {
         res.status(status).send({
             code: status,
             data: typeof data != 'undefined' ? data : null,
-            error: typeof error != 'undefined' ? error : null
+            success: typeof success != 'undefined' ? success : null
         });
     }
 

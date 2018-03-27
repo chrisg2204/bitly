@@ -1,18 +1,14 @@
 /**
- * Objeto con las variables de configuracion de las
- * bases de datos a usar en la aplicacion.
- * @class db
+ * Objeto con las propiedades de configuración de
+ * la base de datos.
  * @module config
- * @author Chistian Giménez <chrisgabo15@gmail.com>
+ * @name Db
+ * @type {Object}
  */
-
 module.exports = {
     /**
-     * Indica si se muestran los script que va ejecutando el orm
-     * y los errores que arroja la ejeccucion de las setencias sql.
-     *
-     * @var LOG_SEQUELIZE_TRANSACTIONS
-     * @type Boolean
+     * Muestra las sentencias SQL ejecutadas por el ORM.
+     * @property LOG_SEQUELIZE_TRANSACTIONS
      */
     LOG_SEQUELIZE_TRANSACTIONS: false,
     /**
@@ -21,6 +17,10 @@ module.exports = {
      *
      * @var DATABASE
      * @type Object
+     */
+    /**
+     * Conexión de base de datos.
+     * @property DATABASE_CONFIG
      */
     DATABASE_CONFIG: {
         HOST: '127.0.0.1',
